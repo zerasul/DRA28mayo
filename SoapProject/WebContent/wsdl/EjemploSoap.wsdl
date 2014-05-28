@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://ejemploSoap.unia.ual.es" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://ejemploSoap.unia.ual.es" xmlns:intf="http://ejemploSoap.unia.ual.es" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://ejemploSoap.unia.ual.es" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="sumar">
+    <complexType>
+     <sequence>
+      <element name="a" type="xsd:int"/>
+      <element name="b" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="sumarResponse">
+    <complexType>
+     <sequence>
+      <element name="sumarReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="sumarResponse">
+
+      <wsdl:part element="impl:sumarResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="sumarRequest">
+
+      <wsdl:part element="impl:sumar" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="EjemploSoap">
+
+      <wsdl:operation name="sumar">
+
+         <wsdl:input message="impl:sumarRequest" name="sumarRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:sumarResponse" name="sumarResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="EjemploSoapSoapBinding" type="impl:EjemploSoap">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="sumar">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="sumarRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="sumarResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="EjemploSoapService">
+
+      <wsdl:port binding="impl:EjemploSoapSoapBinding" name="EjemploSoap">
+
+         <wsdlsoap:address location="http://localhost:8080/SoapProject/services/EjemploSoap"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
