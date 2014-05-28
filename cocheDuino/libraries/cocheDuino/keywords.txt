@@ -1,0 +1,7 @@
+######################################
+# cocheDuino						 #
+#####################################
+cocheDuino	KEYWORD1
+avanzar	KEYWORD2
+girar	KEYWORD2
+parar	KEYWORD2
