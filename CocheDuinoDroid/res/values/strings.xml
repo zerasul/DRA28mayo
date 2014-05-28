@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CocheDuinoDroid</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="conectar">Conectar</string>
+    <string name="arriba">^</string>
+    <string name="izquierda">&lt;</string>
+    <string name="derecha">&gt;</string>
+    <string name="abajo">V</string>
+    <string name="desconectar">Desconectar</string>
+
+</resources>
